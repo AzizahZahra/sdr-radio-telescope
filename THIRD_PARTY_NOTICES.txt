@@ -1,0 +1,32 @@
+Radio Telescope Control - third-party components
+=================================================
+
+The program (main.py, control.py, mount_control.ino) was written for this project.
+It does not contain code, icons or files from SDR#, Airspy or any SDR# plug-in.
+It uses the following components:
+
+Component              License                       Used for
+---------------------  ----------------------------  ------------------------------
+Python                 PSF License                   runtime
+Tcl/Tk (tkinter)       BSD-style (Tcl/Tk license)    windows
+customtkinter          MIT                           widgets
+numpy                  BSD-3-Clause                  arrays
+astropy                BSD-3-Clause                  coordinates, time
+pyserial               BSD-3-Clause                  serial link to the Arduino
+d3-celestial data      BSD-3-Clause, (c) 2015 Olaf   star / constellation data
+                       Frohn; Hipparcos catalogue    (sky_data.py)
+PyInstaller bootloader GPL-2.0 with bootloader       packaging the .exe
+                       exception (any license OK)
+AccelStepper (Arduino) GPL-3.0 (or commercial         stepper control in the firmware
+                       license from AirSpayce)       (mount_control.ino only)
+
+The PC program (RadioTelescope.exe) contains only permissive-licensed components
+(MIT / BSD / PSF). Keep this file, and the BSD notices of customtkinter, numpy,
+astropy, pyserial and d3-celestial, with the product.
+
+The firmware uses AccelStepper (GPL-3.0). When the telescope is sold with this
+firmware on the Arduino, either provide the firmware source under the GPL, buy
+a commercial AccelStepper license, or replace AccelStepper with own code.
+
+Data are recorded with a separate SDR program chosen by the user (e.g. SDR#,
+SDR++). Such programs are not part of this product and are not distributed with it.

@@ -1,0 +1,11 @@
+# Hasil compile PyInstaller & arsip
+build/
+dist/
+*.spec
+*.zip
+
+# Cache & environment Python
+__pycache__/
+*.py[cod]
+venv/
+.env
